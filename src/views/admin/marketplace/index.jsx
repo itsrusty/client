@@ -121,6 +121,7 @@ export default function Marketplace() {
             >
               Todos los cursos
             </Text>
+
             <SimpleGrid
               columns={{ base: 1, md: 3 }}
               gap="20px"
