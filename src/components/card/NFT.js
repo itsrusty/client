@@ -1,7 +1,6 @@
 // Chakra imports
 import {
   AvatarGroup,
-  Avatar,
   Box,
   Button,
   Flex,
@@ -18,7 +17,7 @@ import React, { useState } from "react";
 import { IoHeart, IoHeartOutline } from "react-icons/io5";
 
 export default function NFT(props) {
-  const { image, name, author, bidders, download, currentbid } = props;
+  const { image, name, author } = props;
   const [like, setLike] = useState(false);
   const textColor = useColorModeValue("navy.700", "white");
   const textColorBid = useColorModeValue("brand.500", "white");
@@ -105,9 +104,6 @@ export default function NFT(props) {
                 "2xl": "0px",
               }}
               fontSize='12px'>
-              {bidders.map((avt, key) => (
-                <Avatar key={key} src={avt} />
-              ))}
             </AvatarGroup>
           </Flex>
           <Flex
@@ -121,11 +117,8 @@ export default function NFT(props) {
               "2xl": "row",
             }}
             mt='25px'>
-            <Text fontWeight='700' fontSize='sm' color={textColorBid}>
-              Current Bid: {currentbid}
-            </Text>
             <Link
-              href={download}
+              href={"#"}
               mt={{
                 base: "0px",
                 md: "10px",
@@ -141,7 +134,7 @@ export default function NFT(props) {
                 borderRadius='70px'
                 px='24px'
                 py='5px'>
-                Place Bid
+                Ver ahora
               </Button>
             </Link>
           </Flex>
